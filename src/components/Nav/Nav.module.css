@@ -1,0 +1,40 @@
+.nav {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    grid-area: n;
+    background-color: #ceffee;
+    padding-top: 20px;
+    padding-left: 15px;
+    width: 130px;
+    height: 100%;
+    box-shadow: 0 0 3px #99aa99;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.item {
+    color: #4f5c5c;
+    font-weight: 500;
+    font-size: 19px;
+    height: 30px;
+    padding-top: 2px;
+    padding-left: 4px;
+}
+
+.item .active {
+    display: block;
+    width: 112px;
+    color: #000000;
+    border-right: 4px solid #000000;
+    cursor: pointer;
+    font-weight: 600;
+    transition: font-weight .2s;
+}
+
+.item:hover {
+    color: #222222;
+}
