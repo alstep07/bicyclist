@@ -1,13 +1,13 @@
 import React from "react";
-import ava from "../../../img/ava.jpg";
 import c from "./PersonalData.module.css";
+import img from '../../../img/ava.jpg';
 
-const PersonalData = () => {
+const PersonalData = (props) => {
     return (
     <div className={c.ava}>
-        <img className={c.img} src={ava} alt="ava" /> 
-        <h2 className={c.nickname}>Alexandr Stepanenko</h2>
-        <p>Bike: GT Avalanche sport 2014</p>
+        <img className={c.img} src={img} alt="ava" />
+        <h2 className={c.nickname}>{props.state.firstName} {props.state.lastName}</h2>
+        <p>{props.state.bikeName}</p>
     </div>
     )
 }

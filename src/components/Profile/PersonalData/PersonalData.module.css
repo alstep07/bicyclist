@@ -1,9 +1,8 @@
 .ava {
-    position: fixed;
     right: 15px;
     top: 85px;
     grid-area: a;
-    width: 300px;    
+    width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +11,7 @@
 .img {
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 5px #999999;  
+    box-shadow: 0 0 5px #999999;
 }
 
 .nickname {

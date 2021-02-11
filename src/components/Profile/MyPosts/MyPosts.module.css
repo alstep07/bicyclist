@@ -1,3 +1,5 @@
 .content {
     grid-area: c;
+    max-height: calc(100vh - 100px);
+    overflow: scroll;
 }
