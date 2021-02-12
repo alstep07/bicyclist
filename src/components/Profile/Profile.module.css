@@ -1,5 +1,4 @@
 .profile {
-    background-color: #eee;
     display: grid;
     grid-gap: 15px;
     grid-template: 1fr 1fr / 1fr 300px;

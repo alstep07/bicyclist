@@ -16,10 +16,10 @@ a {
     grid-template-areas:
         "h h"
         "n c";
+    background-color:#eee;
 }
 
 .app-wrapper-content {
     grid-area: c;
     padding: 0 1rem;
-    background-color:#e4e1e1;
 }

@@ -1,10 +1,9 @@
-let state = {
+const state = {
     profilePage: {
         personalData: {
             firstName: 'Oleksandr',
             lastName: 'Stepanenko',
             bikeName: 'Bike: GT Avalanche sport 2014',
-            imgUrl: '../img/ava.jpg'
         },
         posts: [
             { id: 1, message: "Fucking post!", likeCounter: 36 },
@@ -27,15 +26,26 @@ let state = {
             { id: 4, message: "Nice bike!" },
             { id: 5, message: "Good job)" },
         ],
+        myMessages: [
+
+        ],
         dialogs: [
             { id: 1, name: "Sasha" },
             { id: 2, name: "Dima" },
             { id: 3, name: "Oleg" },
             { id: 4, name: "Misha" },
             { id: 5, name: "Julia" },
-            
+
         ]
     }
+}
+
+export const addMessage = (newMessage) => {
+    const newOutMessage = {
+        id: 0,
+        message: newMessage
+    }
+    state.dialogsPage.myMessages.push(newOutMessage);
 }
 
 export default state;
