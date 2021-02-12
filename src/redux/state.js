@@ -33,6 +33,7 @@ let state = {
             { id: 3, name: "Oleg" },
             { id: 4, name: "Misha" },
             { id: 5, name: "Julia" },
+            
         ]
     }
 }

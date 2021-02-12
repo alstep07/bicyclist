@@ -1,3 +1,14 @@
 .friends {
     grid-area: f;
+    display: grid;
+    justify-content: center;
+    grid-template: 40px repeat(2, 110px) / repeat(3, 100px);
+    text-align: center;
+}
+
+.header {
+    grid-row: 0;
+    grid-column: 1 / span 3;
+    font-size: 18px;
+    font-weight: 500;
 }

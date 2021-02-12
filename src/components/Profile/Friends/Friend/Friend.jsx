@@ -3,8 +3,11 @@ import c from "./Friend.module.css";
 
 const Friend = (props) => {
     return (
-        <div className={c.name}>
-            {props.name}
+        <div className={c.friend}>
+            <img src="#" alt="ava" className={c.ava}/>
+            <p className={c.name}>
+                {props.name}
+            </p>
         </div>
     )
 }

@@ -1,3 +1,13 @@
-.name {
-    position: absolute;
+.friend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ava {
+    display: block;
+    width: 65px;
+    height: 65px;
+    background-color: #bbb;
 }

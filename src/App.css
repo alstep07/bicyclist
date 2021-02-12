@@ -9,17 +9,17 @@ a {
     color: inherit;
 }
 
-.app-wrapper-content {
-    margin: 70px 0 0 130px;
-    min-height: calc(100vh - 70px);
-    max-width: calc(100vw - 130px);
-    padding: 15px;
-    background-color:#eeeeee;
+.app-wrapper {
+    display: grid;
+    height: 100vh;
+    grid-template: 60px 1fr / 130px 1fr;
+    grid-template-areas:
+        "h h"
+        "n c";
 }
 
-
-
-
-
-
-
+.app-wrapper-content {
+    grid-area: c;
+    padding: 0 1rem;
+    background-color:#e4e1e1;
+}

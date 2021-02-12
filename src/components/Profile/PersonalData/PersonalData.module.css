@@ -1,6 +1,5 @@
 .ava {
-    right: 15px;
-    top: 85px;
+    margin-top: 15px;
     grid-area: a;
     width: 300px;
     display: flex;

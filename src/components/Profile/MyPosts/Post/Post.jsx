@@ -2,12 +2,18 @@ import React from "react";
 import c from "./Post.module.css";
 
 const Post = (props) => {
+    let likesElement = React.createRef();
+
+    let addLike = () => {
+        
+    }
+
     return (
         <div className={c.item}>
             {props.message}
-            <div className={c.likes}>
-                {props.likeCounter} 
-            </div>
+            <button onClick={addLike} ref={likesElement} className={c.likes}>
+                {props.likeCounter}
+            </button>
         </div>
     )
 }

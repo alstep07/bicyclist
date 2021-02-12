@@ -1,30 +1,30 @@
 .item {
     position: relative;
-    margin: auto;
-    margin-bottom: 15px;
-    width: 95%;
+    margin-top: 15px;
+    width: 97%;
     padding: 15px;
     background-color: #fff;
     min-height: 150px;
-    box-shadow: 0 0 4px #999999;
-    border-radius: 3px;
+    box-shadow: 0 8px 6px -6px #777;
+    border-radius: 7px;
 
 }
 
 .likes {
-    padding-top: 4px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
     width: 40px;
     height: 25px;
-    background-color: #bcdeff;
-    border-radius: 4px;
-    box-shadow: 0 0 4px #999;
     text-align: center;
     font-size: 15px;
     line-height: 15px;
     font-weight: 500;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+    background-color: #bcdeff;
+    border-radius: 4px;
+    box-shadow: 0 0 4px #999;
+    outline: none;
+    border: none;
 }
 
 .likes:hover {
