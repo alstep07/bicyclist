@@ -5,18 +5,18 @@ const NewMessage = (props) => {
 	const messageElement = React.createRef();
 
 	const addMessage = () => {
-		props.addMessage();
+		props.store.addMessage();
 	};
 
 	const onMessageChange = () => {
 		let text = messageElement.current.value;
-		props.updateMessageText(text);
+		props.store.updateMessageText(text);
 	};
 
 	return (
 		<div className={c.newMessage}>
 			<textarea
-                value={props.dialogsPage.newMessageText}
+				value={props.store.state.dialogsPage.newMessageText}
 				onChange={onMessageChange}
 				ref={messageElement}
 				className={c.text}
