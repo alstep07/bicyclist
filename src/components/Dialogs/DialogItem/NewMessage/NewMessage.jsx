@@ -5,13 +5,12 @@ const NewMessage = (props) => {
     const messageElement = React.createRef();
 
     const addMessage = () => {
-		let message = messageElement.current.value;
-		props.addMessage(message);
-		messageElement.current.value = "";
+		props.addMessage();
 	};
 
 	const onMessageChange = () => {
-		props.addMessageText(messageElement.current.value);
+        let text = messageElement.current.value;
+		props.updateMessageText(text);
 	}
 
     return (

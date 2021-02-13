@@ -26,7 +26,7 @@ const App = (props) => {
 						<Dialogs
 							state={props.state.dialogsPage}
 							addMessage={props.addMessage}
-							addMessageText={props.addMessageText}
+							updateMessageText={props.updateMessageText}
 						/>
 					)}
 				/>

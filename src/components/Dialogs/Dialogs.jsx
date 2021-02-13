@@ -12,7 +12,7 @@ const Dialogs = (props) => {
 	const messagesElements = props.state.messages.map((m) => (
 		<Message id={m.id} message={m.message} />
 	));
-	
+
 	const myMessagesElements = props.state.myMessages.map((m) => (
 		<Message id={m.id} message={m.message} />
 	));
@@ -21,7 +21,7 @@ const Dialogs = (props) => {
 		<div className={c.wrapper}>
 			<div className={c.dialogsItems}>{dialogsElements}</div>
 			<div className={c.messagesItems}>{messagesElements}{myMessagesElements}</div>
-			<NewMessage addMessage={props.addMessage} addMessageText={props.addMessageText}/>
+			<NewMessage addMessage={props.addMessage} updateMessageText={props.updateMessageText}/>
 		</div>
 	);
 };
