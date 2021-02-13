@@ -19,7 +19,6 @@
 }
 
 .messagesItems {
-    margin-top: 1rem;
     grid-area: m;
     max-width: 500px;
     max-height: 400px;

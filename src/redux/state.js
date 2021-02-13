@@ -59,17 +59,17 @@ const store = {
 		if (newOutMessage.message) {
 			this._state.dialogsPage.myMessages.push(newOutMessage);
 			this._state.dialogsPage.newMessageText = "";
-			this.renderEntireTree(this);
+			this._callSubscriber(this);
 		}
 	},
 	updateMessageText(text) {
 		this._state.dialogsPage.newMessageText = text;
-		this.renderEntireTree(this);
+		this._callSubscriber(this);
 	},
 	subscribe(observer) {
-		this.renderEntireTree = observer;
+		this._callSubscriber = observer;
 	},
-	renderEntireTree() {},
+	_callSubscriber() {},
 };
 
 export default store;
