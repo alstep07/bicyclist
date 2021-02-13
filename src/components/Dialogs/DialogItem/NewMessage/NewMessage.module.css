@@ -1,0 +1,39 @@
+.newMessage {
+    grid-area: n;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.text {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: .8rem;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+
+.text:focus {
+    outline: none;
+}
+
+.button {
+    width: 120px;
+    height: 40px;
+    border: none;
+    font-size: 1.1rem;
+    background-color: #bcdeff;
+    box-shadow: 0 0 3px #888;
+    cursor: pointer;
+    border-radius: 4px;
+
+}
+
+.button:focus {
+    outline: none;
+    border: none;
+}
+
+.button:active {
+    background-color: #ceffee;
+}

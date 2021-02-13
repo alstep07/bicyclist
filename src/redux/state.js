@@ -38,6 +38,7 @@ const state = {
             { id: 4, message: "Nice bike!" },
             { id: 5, message: "Good job)" },
         ],
+        newMessageText: '',
         myMessages: [
 
         ],
@@ -58,6 +59,11 @@ export const addMessage = (newMessage) => {
         message: newMessage
     }
     state.dialogsPage.myMessages.push(newOutMessage);
+    renderEntireTree(state);
+}
+
+export const addMessageText = (text) => {
+    state.dialogsPage.newMessageText = text;
     renderEntireTree(state);
 }
 
