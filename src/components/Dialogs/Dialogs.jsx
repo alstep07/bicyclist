@@ -21,7 +21,7 @@ const Dialogs = (props) => {
 		<div className={c.wrapper}>
 			<div className={c.dialogsItems}>{dialogsElements}</div>
 			<div className={c.messagesItems}>{messagesElements}{myMessagesElements}</div>
-			<NewMessage addMessage={props.addMessage} updateMessageText={props.updateMessageText}/>
+			<NewMessage dialogsPage={props.state} addMessage={props.addMessage} updateMessageText={props.updateMessageText}/>
 		</div>
 	);
 };
