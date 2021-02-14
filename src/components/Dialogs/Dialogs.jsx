@@ -1,12 +1,12 @@
-import React from "react";
-import c from "./Dialogs.module.css";
-import DialogItem from "./DialogItem/DialogItem";
-import Message from "./DialogItem/Message/Message";
-import NewMessage from "./DialogItem/NewMessage/NewMessage";
+import React from 'react';
+import c from './Dialogs.module.css';
+import DialogItem from './DialogItem/DialogItem';
+import Message from './DialogItem/Message/Message';
+import NewMessage from './DialogItem/NewMessage/NewMessage';
 
 const Dialogs = (props) => {
 	const dialogsElements = props.dialogsPage.dialogs.map((d) => (
-		<DialogItem id={d.id} name={d.name}></DialogItem>
+		<DialogItem id={d.id} name={d.name} />
 	));
 
 	const messagesElements = props.dialogsPage.messages.map((m) => (
@@ -24,10 +24,7 @@ const Dialogs = (props) => {
 				{messagesElements}
 				{myMessagesElements}
 			</div>
-			<NewMessage
-				newMessageText = {props.dialogsPage.newMessageText}
-				dispatch = {props.dispatch}
-			/>
+			<NewMessage newMessageText={props.dialogsPage.newMessageText} dispatch={props.dispatch} />
 		</div>
 	);
 };
