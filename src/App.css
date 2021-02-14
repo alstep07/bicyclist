@@ -25,6 +25,7 @@ a {
 }
 
 .app-wrapper-content {
+    max-height: calc(100vh - 60px);
     grid-area: c;
     padding: 0 1rem;
 }

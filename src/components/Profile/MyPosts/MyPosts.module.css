@@ -1,8 +1,12 @@
 .content {
     grid-area: c;
-    max-height: calc(100vh - 60px);
     overflow-y: scroll;
     scrollbar-width: none;
+    display: grid;
+    grid-template-rows: 5fr 2fr;
 }
 
-
+.posts {
+    height: auto;
+    overflow-y: scroll;
+}

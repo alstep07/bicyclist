@@ -1,5 +1,7 @@
 const UPDATE_MESSAGE_TEXT = 'UPDATE_MESSAGE_TEXT';
 const ADD_MESSAGE = 'ADD_MESSAGE';
+const UPDATE_POST_TEXT = 'UPDATE_POST_TEXT';
+const ADD_POST = 'ADD_POST';
 
 const store = {
 	_state: {
@@ -9,6 +11,7 @@ const store = {
 				lastName: 'Stepanenko',
 				bikeName: 'Bike: GT Avalanche sport 2014',
 			},
+			newPostText: '',
 			posts: [
 				{ id: 1, message: 'Fucking post!', likeCounter: 36 },
 				{ id: 2, message: 'This is my post', likeCounter: 55 },
@@ -74,9 +77,29 @@ const store = {
 		} else if (action.type === 'UPDATE_MESSAGE_TEXT') {
 			this._state.dialogsPage.newMessageText = action.text;
 			this._callSubscriber(this);
+		} else if (action.type === 'UPDATE_POST_TEXT') {
+			this._state.profilePage.newPostText = action.text;
+			this._callSubscriber(this);
+		} else if (action.type === 'ADD_POST') {
+			const newPost = {
+				id: 0,
+				message: this._state.profilePage.newPostText,
+				likeCounter: 10,
+			};
+			if (newPost.message) {
+				this._state.profilePage.posts.push(newPost);
+				this._state.profilePage.newPostText = '';
+				this._callSubscriber(this);
+			}
 		}
 	},
 };
+
+export const addPostActionCreator = () => ({ type: ADD_POST });
+export const updatePostTextActionCreator = (newText) => ({
+	type: UPDATE_POST_TEXT,
+	text: newText,
+});
 
 export const addMessageActionCreator = () => ({ type: ADD_MESSAGE });
 export const updateMessageTextActionCreator = (newText) => ({

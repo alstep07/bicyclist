@@ -1,16 +1,19 @@
-import React from "react";
-import c from "./MyPosts.module.css"
-import Post from "./Post/Post"
+import React from 'react';
+import c from './MyPosts.module.css';
+import Post from './Post/Post';
+import NewPost from './NewPost/NewPost';
 
 const MyPosts = (props) => {
-    let postsElements = props.posts
-        .map( p => <Post message={p.message} likeCounter={p.likeCounter}/>);
+	let postsElements = props.profilePage.posts.map((p) => (
+		<Post message={p.message} likeCounter={p.likeCounter} />
+	));
 
-    return (
+	return (
         <div className={c.content}>
-            {postsElements}
+            <div className={c.posts}>{postsElements}</div>
+            <NewPost profilePage={props.profilePage} dispatch={props.dispatch}/>
         </div>
-    )
-}
+    );
+};
 
 export default MyPosts;
