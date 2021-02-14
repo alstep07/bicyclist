@@ -8,9 +8,9 @@ import Friends from "./Friends/Friends";
 const Profile = (props) => {
     return (
         <div className={c.profile}>
-            <MyPosts posts={props.store.state.profilePage.posts}/>
-            <PersonalData state={props.store.state.profilePage.personalData}/>
-            <Friends state={props.store.state.profilePage.friends}/>
+            <MyPosts posts={props.profilePage.posts}/>
+            <PersonalData personalData={props.profilePage.personalData}/>
+            <Friends friends={props.profilePage.friends}/>
         </div>
     )
 };

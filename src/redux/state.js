@@ -48,28 +48,31 @@ const store = {
 			],
 		},
 	},
+
 	get state() {
 		return this._state;
-	},
-	addMessage() {
-		const newOutMessage = {
-			id: 0,
-			message: this._state.dialogsPage.newMessageText,
-		};
-		if (newOutMessage.message) {
-			this._state.dialogsPage.myMessages.push(newOutMessage);
-			this._state.dialogsPage.newMessageText = "";
-			this._callSubscriber(this);
-		}
-	},
-	updateMessageText(text) {
-		this._state.dialogsPage.newMessageText = text;
-		this._callSubscriber(this);
 	},
 	subscribe(observer) {
 		this._callSubscriber = observer;
 	},
 	_callSubscriber() {},
+
+	dispatch(action) {
+		if (action.type === "ADD-MESSAGE") {
+			const newOutMessage = {
+				id: 0,
+				message: this._state.dialogsPage.newMessageText,
+			};
+			if (newOutMessage.message) {
+				this._state.dialogsPage.myMessages.push(newOutMessage);
+				this._state.dialogsPage.newMessageText = "";
+				this._callSubscriber(this);
+			}
+		} else if (action.type === "UPDATE-MESSAGE-TEXT") {
+			this._state.dialogsPage.newMessageText = action.text;
+			this._callSubscriber(this);
+		}
+	}
 };
 
 export default store;

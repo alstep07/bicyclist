@@ -5,18 +5,22 @@ const NewMessage = (props) => {
 	const messageElement = React.createRef();
 
 	const addMessage = () => {
-		props.store.addMessage();
+		let action = {type: "ADD-MESSAGE"}
+		props.dispatch(action);
 	};
 
 	const onMessageChange = () => {
-		let text = messageElement.current.value;
-		props.store.updateMessageText(text);
+		let action = {
+			type: "UPDATE-MESSAGE-TEXT",
+			text: messageElement.current.value
+		}
+		props.dispatch(action);
 	};
 
 	return (
 		<div className={c.newMessage}>
 			<textarea
-				value={props.store.state.dialogsPage.newMessageText}
+				value={props.newMessageText}
 				onChange={onMessageChange}
 				ref={messageElement}
 				className={c.text}
