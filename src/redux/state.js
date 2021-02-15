@@ -84,7 +84,7 @@ const store = {
 			const newPost = {
 				id: 0,
 				message: this._state.profilePage.newPostText,
-				likeCounter: 10,
+				likeCounter: 0,
 			};
 			if (newPost.message) {
 				this._state.profilePage.posts.push(newPost);
