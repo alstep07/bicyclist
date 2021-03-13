@@ -3,7 +3,7 @@
     overflow-y: scroll;
     scrollbar-width: none;
     display: grid;
-    grid-template-rows: 5fr 2fr;
+    grid-template-rows: 3fr 1fr;
 }
 
 .posts {
